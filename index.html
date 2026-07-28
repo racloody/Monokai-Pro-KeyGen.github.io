@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monokai Pro Keygen</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #2d2a2e;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .main-title {
+      font-size: 2.2rem;
+      color: #78dce8;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: center;
+      animation: fadeInDown 0.8s ease-out forwards;
+    }
+
+    .box {
+      background: #221f22;
+      padding: 40px;
+      border-radius: 12px;
+      width: 480px;
+      max-width: 90%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      box-sizing: border-box;
+      border: 1px solid #3a373a;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .box:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+    }
+
+    label {
+      font-size: 1.1rem;
+      display: block;
+      margin-top: 15px;
+      color: #ab9df2;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 12px;
+      border-radius: 6px;
+      border: none;
+      box-sizing: border-box;
+      font-size: 1.05rem;
+    }
+
+    input { 
+      background: #2d2a2e; 
+      color: #fff; 
+      border: 1px solid #555; 
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #ffd866;
+      box-shadow: 0 0 8px rgba(255, 216, 102, 0.3);
+    }
+
+    button { 
+      background: #ff6188; 
+      color: #fff; 
+      font-weight: bold; 
+      cursor: pointer; 
+      transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+    }
+
+    button:hover { 
+      background: #f05077; 
+      box-shadow: 0 4px 15px rgba(255, 97, 136, 0.4);
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    button:disabled {
+      background: #5b585c;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    /* --- ANIMATION DE RÉFLEXION / LOADER --- */
+    .loader-container {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 25px;
+      color: #ffd866;
+      font-size: 1.1rem;
+      animation: fadeIn 0.3s ease-out forwards;
+    }
+
+    .dots-loader {
+      display: flex;
+      gap: 6px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background-color: #ffd866;
+      border-radius: 50%;
+      animation: pulse 1.2s infinite ease-in-out;
+    }
+
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+
+    /* Bloc de résultat animé */
+    .result { 
+      margin-top: 25px; 
+      padding: 15px; 
+      background: #2d2a2e; 
+      border: 1px solid #a9dc76; 
+      border-radius: 6px; 
+      font-family: monospace; 
+      color: #a9dc76; 
+      font-size: 1.25rem;
+      text-align: center;
+      word-break: break-all; 
+      display: none;
+    }
+
+    .result.show {
+      display: block;
+      animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+
+    /* Keyframes */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(0.8); opacity: 0.4; }
+      50% { transform: scale(1.4); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="main-title">Générateur de Licence Monokai Pro</h1>
+
+  <div class="box">
+    <h2 style="color: #ffd866; margin-top:0; font-size: 1.6rem;">Monokai Keygen</h2>
+    <label for="email">Email :</label>
+    <input type="email" id="email" placeholder="votre@email.com" autocomplete="off">
+    <button id="btnGenerate" onclick="generate()">Générer la clé</button>
+
+    <!-- Faux temps de réflexion (Loader) -->
+    <div id="loader" class="loader-container">
+      <span>Calcul du hash MD5</span>
+      <div class="dots-loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+
+    <!-- Résultat -->
+    <div id="result" class="result"></div>
+  </div>
+
+  <script>
+    function generate() {
+      const emailInput = document.getElementById('email');
+      const btn = document.getElementById('btnGenerate');
+      const loader = document.getElementById('loader');
+      const resDiv = document.getElementById('result');
+      const email = emailInput.value.trim();
+
+      if (!email) {
+        alert('Veuillez entrer un email');
+        return;
+      }
+
+      if (typeof CryptoJS === "undefined") {
+        alert("Erreur : La librairie CryptoJS n'a pas pu être chargée. Vérifiez votre connexion internet.");
+        return;
+      }
+
+      // 1. Masquer le résultat précédent et désactiver le bouton
+      resDiv.classList.remove('show');
+      resDiv.style.display = 'none';
+      btn.disabled = true;
+      btn.innerText = "Calcul en cours...";
+      
+      // 2. Afficher l'animation de réflexion
+      loader.style.display = 'flex';
+
+      // 3. Faux temps d'attente (1.5 seconde)
+      setTimeout(() => {
+        const uuid = "fd330f6f-3f41-421d-9fe5-de742d0c54c0";
+        const hash = CryptoJS.MD5(uuid + email).toString();
+        const key = hash.substring(0, 25).match(/.{1,5}/g).join('-');
+
+        // Cacher le loader et réactiver le bouton
+        loader.style.display = 'none';
+        btn.disabled = false;
+        btn.innerText = "Générer la clé";
+
+        // Afficher la clé avec l'animation Pop-in
+        resDiv.innerText = key;
+        resDiv.style.display = 'block';
+        void resDiv.offsetWidth; // Forcer le reflow CSS
+        resDiv.classList.add('show');
+      }, 1500); // 1500 ms = 1.5 secondes
+    }
+  </script>
+
+</body>
+</html>
